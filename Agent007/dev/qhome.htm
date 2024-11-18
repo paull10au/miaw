@@ -12,6 +12,12 @@
 <body>
 
 <script type='text/javascript'>
+	
+	window.addEventListener("onEmbeddedMessagingReady", e => {
+	        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+	            "organizationTypeId": "XXYYZZ
+        });
+		
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
@@ -31,6 +37,5 @@
 </script>
 <script type='text/javascript' src='https://qlabs-org--agent007.sandbox.my.site.com/ESWQHomeMessagingforW1731900036653/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
-  
 </body>
 </html>
