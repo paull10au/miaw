@@ -10,33 +10,34 @@
 <title>Agent 007 - Q Home</title>
 </head>
 <body>
-
-<script type='text/javascript'>
 	
-	window.addEventListener("onEmbeddedMessagingReady", e => {
-	        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-	            "organizationTypeId": "XXYYZZ"
-        	});
-	});
-		
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-
-			embeddedservice_bootstrap.init(
-				'00D7h0000004oHJ',
-				'Q_Home_Messaging_for_Web',
-				'https://qlabs-org--agent007.sandbox.my.site.com/ESWQHomeMessagingforW1731900036653',
-				{
-					scrt2URL: 'https://qlabs-org--agent007.sandbox.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://qlabs-org--agent007.sandbox.my.site.com/ESWQHomeMessagingforW1731900036653/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
 </body>
+	<script type='text/javascript'>
+		function initEmbeddedMessaging() {
+			try {
+				embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+	
+				embeddedservice_bootstrap.init(
+					'00D7h0000004oHJ',
+					'Q_Home_Messaging_for_Web',
+					'https://qlabs-org--agent007.sandbox.my.site.com/ESWQHomeMessagingforW1731900036653',
+					{
+						scrt2URL: 'https://qlabs-org--agent007.sandbox.my.salesforce-scrt.com'
+					}
+				);
+			} catch (err) {
+				console.error('Error loading Embedded Messaging: ', err);
+			}
+		};
+	</script>
+	
+	<script type='text/javascript' src='https://qlabs-org--agent007.sandbox.my.site.com/ESWQHomeMessagingforW1731900036653/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+	
+	<script type='text/javascript'>
+		window.addEventListener("onEmbeddedMessagingReady", e => {
+		        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+		            "organizationTypeId": "XXYYZZ"
+	        	});
+		});
+	</script>
 </html>
